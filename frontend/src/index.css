@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #f0f7f7;
+    color: #1a2e2e;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 600;
+    color: #1a2e2e;
+  }
+}
+
+@layer components {
+  .mesh-bg {
+    background:
+      radial-gradient(circle at 20% 10%, rgba(234, 227, 141, 0.18), transparent 25%),
+      radial-gradient(circle at 85% 20%, rgba(60, 139, 137, 0.4), transparent 30%),
+      radial-gradient(circle at 50% 80%, rgba(234, 227, 141, 0.12), transparent 25%),
+      linear-gradient(135deg, #0f4f4c 0%, #2a6360 45%, #3c8b89 100%);
+  }
+
+  .card-yellow {
+    background: linear-gradient(145deg, #fefcf7 0%, #fcf9f0 60%, #f8f4e8 100%);
+    border: 1px solid rgba(196, 168, 0, 0.22);
+    border-radius: 16px;
+  }
+
+  .card-hover {
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  }
+}
