@@ -85,6 +85,7 @@ const detect = async (req, res) => {
       acneLevel: acne.acne_level,
       acneLabel: acne.acne_label,
       acneDeskripsi: acne.acne_deskripsi,
+      acnePenyebab: acne.acne_penyebab,
       confidence: acne.confidence,
       confidencePct: acne.confidence_pct,
       saranDokter: acne.saran_dokter,

@@ -439,6 +439,12 @@ const ResultPage = () => {
     acne.acne_deskripsi ||
     severityInfo.description
 
+  const acnePenyebab =
+    result.acnePenyebab ||
+    result.acne_penyebab ||
+    acne.acne_penyebab ||
+    ''
+
   const confidence = getConfidencePercent(
     result.confidencePct ||
       acne.confidence_pct ||
@@ -620,6 +626,18 @@ Cari di e-commerce: ${productLink}`
                 <p className="text-sm text-text-muted mb-4">
                   {acneDescription}
                 </p>
+
+                {acnePenyebab && (
+                  <div className="mb-4 rounded-2xl border border-[#D7ECE5] bg-[#EFF8F5] p-4">
+                    <p className="text-xs font-bold text-teal uppercase mb-2">
+                      Penyebab Jerawat
+                    </p>
+
+                    <p className="text-sm text-text-muted leading-relaxed whitespace-pre-line">
+                      {acnePenyebab}
+                    </p>
+                  </div>
+                )}
 
                 <div className="mb-4">
                   <p className="text-xs font-bold text-text-muted uppercase mb-2">
